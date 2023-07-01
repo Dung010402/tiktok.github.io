@@ -1,0 +1,82 @@
+.search,
+.search-result {
+    width: 361px;
+}
+.search {
+    height: var(--search-height);
+    display: flex;
+    position: relative;
+    background-color: rgba(22, 24, 35, 0.06);
+    border-radius: var(--search-border-radius);
+    padding-left: 16px;
+    border: 1px solid transparent;
+
+    input {
+        flex: 1;
+        height: 100%;
+        color: var(--black);
+        font-size: 1.6rem;
+        background-color: transparent;
+        caret-color: var(--primary);
+    }
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+    &:hover .search-btn {
+        background-color: rgba(22, 24, 35, 0.03);
+        cursor: pointer;
+        color: rgba(22, 24, 0.75);
+    }
+
+    &::after {
+        content: '';
+        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+        width: 1px;
+        top: var(--search-top-spacer);
+        right: var(--search-button-width);
+        position: absolute;
+        background-color: rgba(22, 24, 35, 0.12);
+    }
+}
+.search-result {
+}
+
+.search-title {
+    height: 30px;
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    line-height: 20px;
+    font-weight: 500;
+    color: rgba(22, 24, 35, 0.5);
+}
+
+.clear,
+.loading {
+    position: absolute;
+    right: calc(var(--search-button-width) + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(22, 24, 35, 0.34);
+}
+
+.loading {
+    animation: spinner 0.85s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.search-btn {
+    height: 100%;
+    width: var(--search-button-width);
+    border-bottom-right-radius: var(--search-border-radius);
+    border-top-right-radius: var(--search-border-radius);
+    font-size: 2rem;
+    color: rgba(22, 24, 35, 0.34);
+}

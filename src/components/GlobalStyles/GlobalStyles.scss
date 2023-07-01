@@ -1,0 +1,88 @@
+@import 'normalize.css';
+
+:root {
+    --primary: #fe2c55;
+    --black: #000;
+    --white: #fff;
+    --text-color: rgba(22, 24, 35);
+    //default layout
+    --default-layout-header-height: 60px;
+    --default-layout-width: 1150px;
+    --default-layout-horizontal-spacer: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'ProximaNova', sans-serif;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+a[to] {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+// fonts
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Regular.woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/ProximaNova-Semibold.woff2');
+    font-weight: 500;
+}
+@font-face {
+    font-family: Sofiapro;
+    src: url('/assets/fonts/sofiapro-bold.woff');
+    font-weight: 700;
+}
+
+// Custom tippy tooltip
+body {
+    .tippy-box {
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        border-radius: 8px;
+        background-color: rgba(84, 84, 84, 0.92);
+    }
+}
+div#tippy-5 {
+    transform: translate3d(1134.4px, 56px, 0px) !important;
+}
+.tippy-content {
+    padding: 8px 9px;
+}
+
+.tippy-arrow {
+    color: rgba(84, 84, 84, 0.92);
+}
+.tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+    top: -8px;
+}

@@ -1,0 +1,54 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--white);
+    border: 1px solid transparent;
+    user-select: none;
+    + .wrapper {
+        margin-left: 8px;
+    }
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+.primary {
+    background-color: var(--primary);
+    color: var(--white);
+    &:hover {
+        opacity: 0.8;
+    }
+}
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+// Button types
+.rounded {
+    border-radius: 999px;
+}
+
+// Button sizes
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+.large {
+    padding: 14px 16px;
+    min-width: 140px;
+}
